@@ -1,3 +1,6 @@
+# 自定义忽略内容
+wallets/*.json
+
 # Logs
 logs
 *.log
