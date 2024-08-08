@@ -4,6 +4,7 @@
   "description": "solana区块链常用函数脚本",
   "main": "index.js",
   "dependencies": {
+    "@solana/spl-token": "^0.4.8",
     "@solana/web3.js": "^1.95.2",
     "acorn": "^8.12.1",
     "acorn-walk": "^8.3.3",
