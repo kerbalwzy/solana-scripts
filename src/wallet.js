@@ -82,8 +82,10 @@ function ListWallets(dir = "wallets") {
       const secretKeyArray = JSON.parse(filecontent);
       const secretKeyUint8Array = new Uint8Array(secretKeyArray);
       const keypair = Keypair.fromSecretKey(secretKeyUint8Array);
+      const secretKeyBase58 = bs58.default.encode(secretKeyUint8Array); // 使用 Base58 编码
       keypairs.push(keypair);
       console.log("Wallet Public Key:\t", keypair.publicKey.toBase58());
+      console.log("Secret Key (Base58):\t", secretKeyBase58); // 输出 Base58 编码
     }
     console.log("==========================================");
   }
